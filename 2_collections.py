@@ -32,7 +32,7 @@ for l in range(random.randint(2, 10)):
         dict_list_item[random.choice(string.ascii_lowercase)] = random.randint(0, 100)
     # After iteration finished execution, we have from 2 to 10 key-value pairs in 'dict_list_item' dict and appending this dict into 'dict_list' list
     dict_list.append(dict_list_item)
-dict_list = [{'a': 5, 'b': 7, 'g': 11}, {'a': 3, 'c': 35, 'g': 42}]
+
 # 2. Get previously generated list of dicts and create one common dict:
 
 # Creating empty dict where key-value pairs will be stored
