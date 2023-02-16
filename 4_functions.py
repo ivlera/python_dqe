@@ -58,7 +58,9 @@ def text_normalization(str_var):
     for i in range(len(list_str_var)):
         if (list_str_var[i - 1] in ['\n', '\t']) or (list_str_var[i - 1] == ' ' and list_str_var[i - 2] == '.'):
             list_str_var[i] = list_str_var[i].upper()
-    return ''.join(list_str_var)
+    str_var_joined = ''.join(list_str_var)
+    first_letter_upper = str_var_joined[0].upper()
+    return first_letter_upper+str_var_joined[1:-1]
 
 
 def last_words_sentence(text):

@@ -21,8 +21,13 @@ for i in range(len(list_str_var)):
         # If condition is True, then letter needs to be uppercased. Reassigning lowercased letter uppercased one in 'list_str_var' list
         list_str_var[i] = list_str_var[i].upper()
 
-# Joining previously created list into string
-normalized_text = ''.join(list_str_var)
+# New variable containing list joined into string
+str_var_joined = ''.join(list_str_var)
+# Explicitly making first letter uppercased
+first_letter_upper = str_var_joined[0].upper()
+
+# Concatenating first uppercased letter with the rest of the text
+normalized_text = first_letter_upper+str_var_joined[1:-1]
 
 # 2. Create one more sentence with last words of each existing sentence
 
