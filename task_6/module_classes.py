@@ -57,7 +57,7 @@ def publish_from_file(target_file_name='python_dqe/task_5/news.txt'):
                 # Creating class object and calling inherited publish() method and new remove_file() method
                 pub = PublicationFromFile(user_file_name=user_file, file_path=None) # file_path='user_files' can also be declared
                 pub.publish(target_file_name)
-                # pub.remove_file()
+                pub.remove_file()
                 print(
                     f"Data from '{pub.user_file_full_path}' was added to '{target_file_name}'. File '{pub.user_file_name}' was removed.")
             else:
@@ -78,7 +78,7 @@ def publish_from_file(target_file_name='python_dqe/task_5/news.txt'):
                     # Creating class object and calling inherited publish() method and new remove_file() method
                     pub = PublicationFromFile(user_file_name=user_file, file_path=directory)
                     pub.publish(target_file_name)
-                    # pub.remove_file()
+                    pub.remove_file()
                     print(
                         f"Data from '{pub.user_file_full_path}' was added to '{target_file_name}'. File '{pub.user_file_name}' was removed.")
                 else:
