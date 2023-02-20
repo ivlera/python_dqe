@@ -23,7 +23,6 @@ class News(Publication):
     The class that is inherited from Publication, so it has self.current_date parameter and method publish()
     self.content and self.city parameters should be entered while initializing the object of the class
     __str__ dunder method is used to unite parameters into text following strict predefined pattern
-
     '''
     def __init__(self, content, city):
         super().__init__()
@@ -93,10 +92,10 @@ def publishment(file_name):
             f.write("News feed")
             f.close()
     # Assigning x to input from user, so if 1 will be received, then 'while' clause will start execution. If user will enter any symbol, different from '1', then function will finish execution
-    x = input("Please enter 1 if you want to add item to the newspaper\n")
+    x = input(f"Please enter 1 if you want to add item to the {file_name} news feed file\n")
     while x == '1':
         # Assigning a number to the variable. Basing on what the number is, there will be created object from one of three classes with different parameters.
-        # If input from user is not '1', '2' or '3' then in the console user will see "Wrong choice...." message and x variable will be reassigned (line 124)
+        # If input from user is not '1', '2' or '3' then in the console user will see "Wrong choice...." message and x variable will be reassigned (line 123)
         input_number = input("Please select the category of your publication:\nEnter 1 for News\nEnter 2 for Advertisement\nEnter 3 for Joke of the day\n")
         if input_number == '1':
             content = input("Enter your text: ")
@@ -112,7 +111,7 @@ def publishment(file_name):
                 post = Advertisement(content, expire_date)
                 post.publish(file_name)
             except ValueError:
-            # If date is not in correct format, then error message will be printed to the console and x variable will be reassigned (line 124)
+            # If date is not in correct format, then error message will be printed to the console and x variable will be reassigned (line 123)
                 print('Wrong date format. DD/MM/YYYY format is expected. Try again')
         elif input_number == '3':
             post = WeekdayJoke()
@@ -121,7 +120,4 @@ def publishment(file_name):
             # If none of 3 'if' conditions were True, i.e. if user input was not in [1, 2, 3], then user will see following message in the console and user will have to start entering numbers from very beggining
             print("Wrong choice. Please, review the condition again, you should enter only 1, 2 or 3.")
         # Again assigning x to input from user, so if 1 will be received, then 'while' clause will start execution
-        x = input("Please enter 1 if you want to add item to the newspaper\n")
-
-
-publishment("news.txt")
+        x = input(f"Please enter 1 if you want to add item to the {file_name} news feed file\n")

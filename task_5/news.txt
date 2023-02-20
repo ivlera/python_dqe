@@ -12,3 +12,13 @@ Joke of the day ------------
 Today is Monday and here is the joke:
 What do you call a fish without eyes? Fsh.
 Program rates this joke as 1 of 10
+
+Following 7 lines received from file news1.txt on 20/02/2023 13:20
+
+News -----------------------
+It was snowy 3 days ago
+Batumi,  13/02/2023 12:15
+
+Private Ad -----------------
+Rent an apartment Kobaladze str.
+Actual until: 2023-03-15

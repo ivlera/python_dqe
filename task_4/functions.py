@@ -60,7 +60,7 @@ def text_normalization(str_var):
             list_str_var[i] = list_str_var[i].upper()
     str_var_joined = ''.join(list_str_var)
     first_letter_upper = str_var_joined[0].upper()
-    return first_letter_upper+str_var_joined[1:-1]
+    return first_letter_upper+str_var_joined[1::]
 
 
 def last_words_sentence(text):
@@ -112,25 +112,25 @@ def whitespace_calculator(text):
 
 # Code to verify task 2 implementation refactored
 
-dict_list = list_of_random_dicts()
-common_dict_from_dict_list = common_dict(dict_list)
-print(dict_list)
-print(common_dict_from_dict_list)
+# dict_list = list_of_random_dicts()
+# common_dict_from_dict_list = common_dict(dict_list)
+# print(dict_list)
+# print(common_dict_from_dict_list)
 
 # Code to verify task 3 implementation refactored
 
-normalized_text = text_normalization("""
-homEwork:
-	tHis iz your homeWork, copy these Text to variable. 
-
-	You NEED TO normalize it fROM letter CASEs point oF View. also, create one MORE senTENCE witH LAST WoRDS of each existING SENtence and add it to the END OF this Paragraph.
-
-	it iZ misspeLLing here. fix“iZ” with correct “is”, but ONLY when it Iz a mistAKE. 
-
-	last iz TO calculate nuMber OF Whitespace characteRS in this Text. caREFULL, not only Spaces, but ALL whitespaces. I got 87.
-""")
-sentence = last_words_sentence(normalized_text)
-text_with_new_sentence = add_sentence_to_text(normalized_text, sentence, 3)
-fixed_text = replace_word_in_text(text_with_new_sentence, 'iz', 'is')
-print(fixed_text)
-print(whitespace_calculator(fixed_text))
+# normalized_text = text_normalization("""
+# homEwork:
+# 	tHis iz your homeWork, copy these Text to variable.
+#
+# 	You NEED TO normalize it fROM letter CASEs point oF View. also, create one MORE senTENCE witH LAST WoRDS of each existING SENtence and add it to the END OF this Paragraph.
+#
+# 	it iZ misspeLLing here. fix“iZ” with correct “is”, but ONLY when it Iz a mistAKE.
+#
+# 	last iz TO calculate nuMber OF Whitespace characteRS in this Text. caREFULL, not only Spaces, but ALL whitespaces. I got 87.
+# """)
+# sentence = last_words_sentence(normalized_text)
+# text_with_new_sentence = add_sentence_to_text(normalized_text, sentence, 3)
+# fixed_text = replace_word_in_text(text_with_new_sentence, 'iz', 'is')
+# print(fixed_text)
+# print(whitespace_calculator(fixed_text))
