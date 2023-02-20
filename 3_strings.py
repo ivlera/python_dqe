@@ -27,7 +27,7 @@ str_var_joined = ''.join(list_str_var)
 first_letter_upper = str_var_joined[0].upper()
 
 # Concatenating first uppercased letter with the rest of the text
-normalized_text = first_letter_upper+str_var_joined[1:-1]
+normalized_text = first_letter_upper+str_var_joined[1::]
 
 # 2. Create one more sentence with last words of each existing sentence
 
