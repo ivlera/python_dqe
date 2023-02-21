@@ -1,9 +1,10 @@
 from datetime import datetime
 import calendar
 import random
+from python_dqe.task_7.csv_parsing import CSVCountOutput # imported for task 7 implementation
 
 
-class Publication:
+class Publication(CSVCountOutput):
     '''
     A parent class that initializes attribute that every child class requires: current date
     Method publish(file_name) adds content to the file (news.txt by default, but name of the file can be entered by user as an input parameter)
@@ -16,6 +17,11 @@ class Publication:
     def publish(self, file_name="news.txt"):
         with open(file_name, "a") as f:
             f.write(self.__str__())
+        # Following 3 lines exist for task 7 execution, because .csv files should be reqritten each time new publication arrives to news.txt
+        # As long as function from task 6 also call exactly this publish() method, call of CSVCountOutput create_csv_... methods is required only here
+        CSVCountOutput.__init__(self, file_name=file_name)
+        self.create_csv_of_word_count(csv_file_name='task_5/word_count.csv')
+        self.create_csv_of_letter_count(csv_file_name='task_5/letter_count.csv')
 
 
 class News(Publication):
