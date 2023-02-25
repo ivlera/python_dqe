@@ -24,8 +24,8 @@ class CSVCountOutput:
             e.g. previous list will look like ['Hi','I','am', 'Lera.','Nice','to','meet','you.']
             '-----' not included, but 'Lera.', 'you.' are included, because there are letters
         4. flat_list_only_words - this list is final and method returns exactly this list
-        It includes all items from previous list if they don't have any special symbols (symbols are listed in 'regex' asssingning)
-        If special symbols are in item then method will include in list only characters before the symbol.
+        It includes all items from previous list if they don't have any special symbols (symbols are listed in 'regex')
+        If special symbols are in item then replacing those items with whitespaces, splitting string by whitespaces and adding each separate word to the list flat_list_only_words
             e.g. previous list will look like ['Hi','I','am', 'Lera','Nice','to','meet','you']
         :return: As long as only letters/words amount should be counted, this method returns list where element is a word
         """
@@ -38,14 +38,15 @@ class CSVCountOutput:
             else:
                 flat_list_from_file_splitted.append(element)
         flat_list_cleared = [item for item in flat_list_from_file_splitted if any(symbol.isalpha() for symbol in item) is True]
-        regex = re.compile('[@_!#$%^&*()<>?/\|}{~:,.(0-9)-]')
+        regex = re.compile('[@_!#$%^&*()<>?/\\\|}{~:,.-]')
         flat_list_only_words = []
         for i in flat_list_cleared:
             if (regex.search(i) == None):
                 flat_list_only_words.append(i)
             else:
-                index_of_symbol = regex.search(i).span()[0]
-                flat_list_only_words.append(i[0:index_of_symbol])
+                i_whitespaces = re.sub(regex, ' ', i)
+                for w in i_whitespaces.split(' '):
+                    flat_list_only_words.append(w)
         return flat_list_only_words
 
     def word_count_dict(self):
@@ -55,10 +56,11 @@ class CSVCountOutput:
         """
         word_count_dict = {}
         for i in self.words_from_text():
-            if i.lower() in word_count_dict.keys():
-                word_count_dict[i.lower()] += 1
-            else:
-                word_count_dict[i.lower()] = 1
+            if len(i) > 0:
+                if i.lower() in word_count_dict.keys():
+                    word_count_dict[i.lower()] += 1
+                else:
+                    word_count_dict[i.lower()] = 1
         return word_count_dict
 
     def lowercase_letter_count_dict(self):
@@ -83,7 +85,7 @@ class CSVCountOutput:
         for i in ('').join(self.words_from_text()):
             if (i.isupper() is True) and i in count_uppercase_dict.keys():
                 count_uppercase_dict[i] += 1
-            elif (i.isupper() is True):
+            elif i.isupper() is True:
                 count_uppercase_dict[i] = 1
         return count_uppercase_dict
 

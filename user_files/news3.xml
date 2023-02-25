@@ -1,0 +1,10 @@
+<news>
+    <news_item type="news">
+        <content>Gentleman caught huge sea bass</content>
+        <city>Gonio</city>
+    </news_item>
+    <news_item type="ad">
+        <content>Fresh season fruits and vegetables! Call us 995 591 01 01</content>
+        <expire_date>30/08/2023</expire_date>
+    </news_item>
+</news>

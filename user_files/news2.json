@@ -1,0 +1,15 @@
+{
+  "news_items" :
+  [
+    {
+      "type": "news",
+      "content": "big dog is trying to relax on the beach",
+      "city": "Batumi"
+    },
+    {
+      "type": "ad",
+      "content": "Selling something very expensive",
+      "expire_date": "20/03/2024"
+    }
+  ]
+}

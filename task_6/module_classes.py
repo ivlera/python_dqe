@@ -24,7 +24,7 @@ class PublicationFromFile(Publication):
         with open(self.user_file_full_path, 'r') as f:
             list_from_file = f.readlines()
             string_from_file = "".join(list_from_file)
-            return f'\n\nFollowing {len(list_from_file)} lines received from file {self.user_file_name} on {self.current_date}\n\n{string_from_file}'
+            return f'\n\nFollowing {len(list_from_file)} lines received from file {self.user_file_full_path} on {self.current_date}\n\n{string_from_file}'
 
     def remove_file(self):
         """

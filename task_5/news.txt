@@ -1,33 +1,44 @@
 News feed
 
 News -----------------------
-It is snowy today
-Batumi,  13/02/2023 12:15
+It is sunny today
+Batumi,  25/02/2023 16:32
 
 Private Ad -----------------
 Selling Toyota Prius
-Actual until: 2023-02-24,  10 days left
+Actual until: 2023-02-28,  3 days left
 
 Joke of the day ------------
-Today is Monday and here is the joke:
-What do you call a fish without eyes? Fsh.
+Today is Saturday and here is the joke:
+Where can you buy chicken broth in bulk? The stock market.
 Program rates this joke as 1 of 10
 
-Following 7 lines received from file news1.txt on 20/02/2023 13:20
+Following 7 lines received from file C:\Users\Valeryia_Ivanchankav\PycharmProjects\python_for_DQE\python_dqe\user_files\news1.txt on 25/02/2023 16:33
 
 News -----------------------
 It was snowy 3 days ago
 Batumi,  13/02/2023 12:15
 
-Private Ad -----------------
-Rent an apartment Kobaladze str.
+Private ad -----------------
+Rent an apartment kobaladze str.
 Actual until: 2023-03-15
 
-Joke of the day ------------
-Today is Tuesday and here is the joke:
-What do you call an alligator detective? An investi-gator.
-Program rates this joke as 0 of 10
+Following 7 lines received from file C:\Users\Valeryia_Ivanchankav\PycharmProjects\python_for_DQE\python_dqe\user_files\news2.json on 25/02/2023 16:34
+
+News -----------------------
+big dog is trying to relax on the beach
+Batumi,  25/02/2023 16:34
 
 Private Ad -----------------
-Looking for an apartment
-Actual until: 2023-09-01,  191 days left
+Selling something very expensive
+Actual until: 2024-03-20,  389 days left
+
+Following 7 lines received from file C:\Users\Valeryia_Ivanchankav\PycharmProjects\python_for_DQE\python_dqe\user_files\news3.xml on 25/02/2023 16:34
+
+News -----------------------
+Gentleman caught huge sea bass
+Gonio,  25/02/2023 16:34
+
+Private Ad -----------------
+Fresh season fruits and vegetables! Call us 995 591 01 01
+Actual until: 2023-08-30,  186 days left
